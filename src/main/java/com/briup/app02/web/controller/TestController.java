@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import springfox.documentation.annotations.ApiIgnore;
+
 /**
  * 路由的命名空间
  * http://127.0.0.1:8080 可以访问到当前项目
@@ -14,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
  * http协议！！！
  * 
  * */
+
+@ApiIgnore
 @RestController
 @RequestMapping("/test")
 public class TestController {

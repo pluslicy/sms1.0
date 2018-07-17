@@ -12,6 +12,9 @@ import com.briup.app02.bean.Student;
 import com.briup.app02.service.IStudentService;
 import com.briup.app02.util.MsgResponse;
 
+import springfox.documentation.annotations.ApiIgnore;
+
+@ApiIgnore
 @RestController
 @RequestMapping("/student")
 public class StudentController {

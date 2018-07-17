@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.app02.dao.extend.ClazzVMMapper">
+  <!-- 查询所有班级信息 id,name,description,grade_id,user_id  -->
+  <!-- 
+  	ClazzVM 
+  	column - property	
+  	id-id,
+  	name-name,
+  	description-description 
+  	grade_id - grade 	通过grade_id查找grade
+  	user_id  - user  	通过user_id查找user
+  -->
+  <select id="findAllClazzVM" resultMap="ClazzVMResultMap">
+    select * from poll_clazz
+  </select>
+  
+  <resultMap type="com.briup.app02.vm.ClazzVM" id="ClazzVMResultMap">
+  	<id column="id" property="id"/>
+  	<result column="name" property="name"/>
+  	<result column="description" property="description"/>
+  	<association  
+  		column="grade_id" 
+  		property="grade" 
+  		select="com.briup.app02.dao.GradeMapper.findById">
+  	</association>
+  </resultMap>
+  
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
