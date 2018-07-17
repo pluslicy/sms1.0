@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.app02.dao.OptionMapper">
+  <!-- 查询所有班级信息  -->
+  <select id="findByQuestionId" parameterType="long" resultType="com.briup.app02.bean.Option">
+    select * from poll_option where question_id = #{id}
+  </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
