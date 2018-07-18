@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.app02.dao.QuestionMapper">
+  <!-- 查询所有班级信息  -->
+  <insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="com.briup.app02.bean.Question">
+  	insert into poll_question values(null,#{name},#{questiontype})
+  </insert>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

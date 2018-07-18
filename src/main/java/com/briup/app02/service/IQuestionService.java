@@ -9,4 +9,6 @@ public interface IQuestionService {
 	
 	List<QuestionVM> findAllQuestionVM() throws Exception;
 	
+	void saveQuestion(QuestionVM questionVM) throws Exception;
+	
 }	

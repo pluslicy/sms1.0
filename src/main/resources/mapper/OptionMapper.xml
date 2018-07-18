@@ -7,6 +7,12 @@
   <select id="findByQuestionId" parameterType="long" resultType="com.briup.app02.bean.Option">
     select * from poll_option where question_id = #{id}
   </select>
+  
+  <insert id="save" parameterType="com.briup.app02.bean.Option">
+  	insert into poll_option
+  	values(null,#{label},#{content},#{score},#{question_id})
+  </insert>
+  
 </mapper>
 
 
